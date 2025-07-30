@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu phong thủy bất động sản</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tra cứu phong thủy bất động sản</h1>
+        <form id="fengshuiForm">
+            <div class="form-group">
+                <label for="birthdate">Ngày sinh (dương lịch):</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+            </div>
+            <div class="form-group">
+                <label for="birthhour">Giờ sinh (0–23):</label>
+                <input type="number" id="birthhour" name="birthhour" min="0" max="23" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Giới tính:</label>
+                <select id="gender" name="gender">
+                    <option value="nam">Nam</option>
+                    <option value="nu">Nữ</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="yearBuild">Năm xây nhà / nhập trạch:</label>
+                <input type="number" id="yearBuild" name="yearBuild" required>
+            </div>
+            <div class="form-group">
+                <label for="houseDirection">Hướng nhà:</label>
+                <select id="houseDirection" name="houseDirection">
+                    <option value="">--Chọn--</option>
+                    <option value="Bắc">Bắc</option>
+                    <option value="Đông">Đông</option>
+                    <option value="Đông Nam">Đông Nam</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Tây Nam">Tây Nam</option>
+                    <option value="Tây">Tây</option>
+                    <option value="Tây Bắc">Tây Bắc</option>
+                    <option value="Đông Bắc">Đông Bắc</option>
+                </select>
+            </div>
+            <fieldset>
+                <legend>Thế đất & Môi trường</legend>
+                <div class="form-group">
+                    <input type="checkbox" id="slope" name="slope">
+                    <label for="slope">Đất dốc xuống mặt tiền</label>
+                    <select id="slopeDir" name="slopeDir">
+                        <option value="">--Chọn hướng dốc--</option>
+                        <option value="Bắc">Bắc</option>
+                        <option value="Đông">Đông</option>
+                        <option value="Đông Nam">Đông Nam</option>
+                        <option value="Nam">Nam</option>
+                        <option value="Tây Nam">Tây Nam</option>
+                        <option value="Tây">Tây</option>
+                        <option value="Tây Bắc">Tây Bắc</option>
+                        <option value="Đông Bắc">Đông Bắc</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="road" name="road">
+                    <label for="road">Đường đâm thẳng vào cửa</label>
+                    <select id="roadDir" name="roadDir">
+                        <option value="">--Chọn hướng đường--</option>
+                        <option value="Bắc">Bắc</option>
+                        <option value="Đông">Đông</option>
+                        <option value="Đông Nam">Đông Nam</option>
+                        <option value="Nam">Nam</option>
+                        <option value="Tây Nam">Tây Nam</option>
+                        <option value="Tây">Tây</option>
+                        <option value="Tây Bắc">Tây Bắc</option>
+                        <option value="Đông Bắc">Đông Bắc</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="waterDistance">Có mặt nước trước cửa (cách bao nhiêu mét):</label>
+                    <input type="number" id="waterDistance" name="waterDistance" min="0">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="hospital" name="hospital">
+                    <label for="hospital">Bệnh viện trước mặt</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="temple" name="temple">
+                    <label for="temple">Chùa/đình/miếu trước cửa</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="church" name="church">
+                    <label for="church">Nhà thờ trước cửa</label>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="cemetery" name="cemetery">
+                    <label for="cemetery">Nghĩa địa trước mặt</label>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <button type="button" onclick="calculate()">Xem phong thủy</button>
+            </div>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
